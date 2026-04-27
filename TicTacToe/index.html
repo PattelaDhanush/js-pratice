@@ -1,0 +1,106 @@
+<html>
+    <head>
+        <title>Tic Tac Toe</title>
+        <style>
+            body {
+                background: #f5d142;
+                font-family: cursive;
+                align-content: center;
+                margin: auto;
+                text-align: center;
+            }
+            button {
+                padding: 8px 16px;
+                border-radius: 4px;
+                font-size: 1rem;
+            }
+            .row {
+                display: flex;
+            }
+            #game-layout{
+                place-self: center;
+                margin-top: 24px;
+                border-collapse: collapse;
+            }
+            #player {
+                margin-top: 16px;
+                font-size: 18px; 
+                font-weight: 600; 
+            }
+            td {
+            height: 48px;
+            padding: 8px;
+            width: 48px;
+            text-align: center;
+            align-content: center;
+            }
+            #score-card{
+                display: flex;
+                justify-content: center;
+            }
+            .score-card-label{
+                padding: 1rem;
+                margin: 16px 1rem;
+                border: 2px solid darkslategrey;
+                border-radius: 8px;
+                cursor: pointer;
+            }
+            .score-card-label > span {
+                padding: 0px 1rem;
+            }
+            #row-2 {
+                border-top: 5px solid brown;
+                border-bottom: 5px solid brown;
+            }
+            #col-2 {
+                border-right: 5px solid brown;
+                border-left: 5px solid brown;
+            }
+            .board {
+                position: relative;
+                display: inline-block;
+                margin-bottom: 2rem;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="main-heading">Tic Tac Toe</h1>
+        <button id="start-btn">Start Game</button>
+        <div id="score-card">
+            <div id="score-card-label-X" class="score-card-label">
+                <span id="X">X</span>
+                <span id="score-X">0</span>
+            </div>
+            <div id="score-card-label-O" class="score-card-label">
+                <span id="O">O</span>
+                <span id="score-O">0</span>
+            </div>
+        </div>
+        <div id="player"><span id="player-symbol">X</span> Turn</div>
+        <div id="board" class="board">
+            <table id="game-layout">
+                <tr id="row-1" class="row">
+                    <td id="col-1" class="col"></td>
+                    <td id="col-2" class="col"></td>
+                    <td id="col-3" class="col"></td>
+                </tr>
+                <tr id="row-2" class="row">
+                    <td id="col-1" class="col"></td>
+                    <td id="col-2" class="col"></td>
+                    <td id="col-3" class="col"></td>
+                </tr>
+                <tr id="row-3" class="row">
+                    <td id="col-1" class="col"></td>
+                    <td id="col-2" class="col"></td>
+                    <td id="col-3" class="col"></td>
+                </tr>
+            </table>
+            <div id="winner-banner">
+                <h2 id="winner-player-symbol"></h2>
+            </div>    
+        </div>    
+        <div id="result"></div>
+        <button id="play-again">Play Again</button>
+    </body>
+    <script src="script.js"></script>
+</html>
