@@ -22,11 +22,13 @@
                 place-self: center;
                 margin-top: 24px;
                 border-collapse: collapse;
+                display: none;
             }
             #player {
                 margin-top: 16px;
                 font-size: 18px; 
-                font-weight: 600; 
+                font-weight: 600;
+                display: none; 
             }
             td {
             height: 48px;
@@ -45,9 +47,14 @@
                 border: 2px solid darkslategrey;
                 border-radius: 8px;
                 cursor: pointer;
+                display: flex;
+                flex-direction: row;
+                place-items: center;
             }
-            .score-card-label > span {
+            .score-card-label div {
                 padding: 0px 1rem;
+                font-size: 24px;
+                padding-left: 2rem;
             }
             #row-2 {
                 border-top: 5px solid brown;
@@ -62,6 +69,18 @@
                 display: inline-block;
                 margin-bottom: 2rem;
             }
+            #play-again{
+                display: none;
+            }
+            button:active {
+                outline: none;
+                background-color: inherit; 
+            }
+            @media only screen and (max-width: 314px) {
+                #score-card {
+                    display: block;
+                }
+            }
         </style>
     </head>
     <body>
@@ -69,15 +88,18 @@
         <button id="start-btn">Start Game</button>
         <div id="score-card">
             <div id="score-card-label-X" class="score-card-label">
-                <span id="X">X</span>
-                <span id="score-X">0</span>
+                <img src="images/X_icon.png" height="30px" width="30px" alt="X">
+                <div id="score-X">0</div>
             </div>
             <div id="score-card-label-O" class="score-card-label">
-                <span id="O">O</span>
-                <span id="score-O">0</span>
+                <img src="images/O_icon.png" height="30px" width="30px" alt="O">
+                <div id="score-O">0</div>
             </div>
         </div>
-        <div id="player"><span id="player-symbol">X</span> Turn</div>
+        <div id="player">
+            <span id="player-symbol">
+                <img src="images/X_icon.png" height="30px" width="30px" alt="X">
+            </span> Turn</div>
         <div id="board" class="board">
             <table id="game-layout">
                 <tr id="row-1" class="row">
